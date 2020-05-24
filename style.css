@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
+html {
+  font-family: 'Kalam', cursive;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* Style the body */
 body {
-  font-family: Arial;
+  font-family: 'Kalam', cursive;
+  padding: 0px;
+  background: #f1f1f1;
   margin: 0;
 }
-
 /* Header/Logo Title */
 .header {
-  font-family: 'Kalam', cursive;
   padding: 60px;
   text-align: center;
   background: #1abc9c;
@@ -33,7 +40,6 @@ ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* height: 60px; */
   background-color: #333333;
   overflow: hidden;
   width: 100%;
@@ -54,7 +60,132 @@ li a:hover:not(.active){
 .active{
   background-color: #6d6a6a;
 }
-
-
-/* Page Content */
-.content {padding:20px;}
+.inventory{
+  display: block;
+  float: left;
+  width: 60%;
+  position: relative;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card {
+  float: left;
+  width: 33.3%;
+  display: block;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+@media screen and (max-width:700px) {
+  .inventory{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+  .inventory .card {
+    width: 50%;
+    display: block;
+  }
+}
+@media screen and (max-width:300px) {
+  .inventory{
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+  .inventory .card {
+    width: 100%;
+    display: block;
+  }
+}
+.container {
+  padding: 0px 16px;
+  margin: 0;
+}
+.container h5{
+  text-align: center;
+  margin-bottom: 0px;
+}
+.card img{
+  height: 100px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.send-button, .button {
+  border: none;
+  outline: 0;
+  display: block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius:10px
+}
+.send-button{
+  color: black;
+  background-color: rgb(4, 196, 4);
+}
+.sidebar{
+  float: right;
+  position: relative;
+  background-color: white;
+  margin-top: 20px;
+  padding-left: 15px;
+  width: 36%;
+  height: 85vh;
+  border-radius: 10px;
+}
+.address{
+  float: right;
+  display: inline;
+  position: absolute;
+  top: 2px;
+  width: 90%;
+  background-color: white;
+  padding: 20px;
+  margin: 20px 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(139, 134, 134);
+}
+input{
+  margin: 3px 3px;
+  border-radius: 3px;
+  width: 100%;
+}
+.cart{
+  position:absolute;
+  float: right;
+  top: 240px;
+  padding: 20px;
+  margin: 10px 5px;
+  margin-top: 24px;
+  display: block;
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(139, 134, 134);
+}
+.SendOnWhatsApp{
+  position: absolute;
+  top: 410px;
+  text-align: center;
+}
+.footer {
+  font-family: 'Kalam', cursive;
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  margin-top: 20px;
+  text-shadow: black 0px 0px 3px;
+}
